@@ -16,3 +16,7 @@ Se isso ajudou você não esqueça da estrela!
 - informações do bot
 - remover o bot automaticamente ao dono sair do servidor
 - rank de votos
+
+# Importante 
+
+Para tudo ocorrer certo vá em todos os comandos modifique os id dos cargos e dos canais! Vai ter um comentário de onde trocar!
