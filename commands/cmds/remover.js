@@ -9,8 +9,8 @@ module.exports = {
       return message.reply("Você precisa mencionar um bot")
     }
     var db = client.db
-    var refe1 = `BlueF/Bots/${bot.user.id}/Infos`
-    var refe2 = `BlueF/Donos/${message.author.id}/Bot`
+    var refe1 = `BotList/Bots/${bot.user.id}/Infos`
+    var refe2 = `BotList/Donos/${message.author.id}/Bot`
     db.ref(refe1).once("value").then(async function(snap){
     var db2 = await db.ref(refe2).once("value")
     let b = db2.val().bot
