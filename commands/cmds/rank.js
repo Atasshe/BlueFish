@@ -12,7 +12,7 @@ module.exports = {
     var peoToShow = 10
     var mes = []
     for(let i=0;i<all;i++) {
-     var d = await db.ref(`BlueF/Bots/${p[i].user.id}/Infos`).once("value")
+     var d = await db.ref(`BotList/Bots/${p[i].user.id}/Infos`).once("value")
      if(d.val()){
      mes.push({
        name: p[i].user.username,
