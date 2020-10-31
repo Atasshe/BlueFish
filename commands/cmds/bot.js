@@ -8,7 +8,7 @@ module.exports = {
       return message.reply("Você precisa mencionar um bot!")
     }
     var db = client.db
-    var refe = `BlueF/Bots/${bot.user.id}/Infos`
+    var refe = `BotList/Bots/${bot.user.id}/Infos`
     let data = db.ref(refe).once("value").then(async function(data) {
     if(data.val() == null) {
       return message.reply("Este bot não esta registrado na minha database")
