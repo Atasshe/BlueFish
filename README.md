@@ -1,7 +1,7 @@
 # BlueFish Git
 
 Um simples bot para uma botlist!
-Feito por: Heimsk#1904
+Feito por: Heimsk#1904\n<br>
 Link da botlist: 
 
 # Descrição
