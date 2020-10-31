@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js")
 module.exports = {
   name: "verificar",
   run: async (client, message, args) => {
-    if(!message.member.roles.cache.has('745342351953625098')){
+    if(!message.member.roles.cache.has('id do cargo de verificador')){
       return message.reply("Você não é um verificador!")
     }
     let bot = message.mentions.members.first()
@@ -14,7 +14,7 @@ module.exports = {
       return message.reply("Ele não é um bot -_-")
     }
     var db = client.db
-    var refe = `BlueF/Bots/${bot.user.id}/Infos`
+    var refe = `BotList/Bots/${bot.user.id}/Infos`
     let datab = db.ref(refe).once("value").then(async function(data) {
     if(data.val() == null) {
       return message.reply("Este bot não é de um membro")
@@ -32,7 +32,7 @@ module.exports = {
     let prefixo = data.val().prefixo
     let lingua = data.val().lingua
     let dono = data.val().dono
-    let bl = client.channels.cache.get('745387874324840539')
+    let bl = client.channels.cache.get('id do canal de logs')
     bl.send(`🔍 | O bot \`${bot.user.username}\` de <@${dono}> está sendo verificado pelo(a) ${message.author}`)
     message.channel.send(`Você está verificando o bot \`${bot.user.username}\`!`)
     db.ref(refe).update({
