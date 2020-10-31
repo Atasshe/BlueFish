@@ -10,7 +10,7 @@ module.exports = {
       return message.reply("Você precisa mencionar um bot!")
     }
     var db = client.db
-    var refe = `BlueF/Bots/${bot.user.id}/Infos`
+    var refe = `BotList/Bots/${bot.user.id}/Infos`
     let da = db.ref(refe).once("value").then(async function(data) {
     if(data.val() == null) {
       return message.reply("Este bot não é de um membro!")
@@ -23,17 +23,19 @@ module.exports = {
     if(f == "sim") {
       return message.reply("Este bot ja foi verificado!")
     }
+
+    //Aqui é pra ele separar o bot pela linguagem para ser só 1 cargo coloque o mesmo id em todos os ifs
     let prefixo = data.val().prefixo
     let lingua = data.val().lingua
     let dono = data.val().dono
     if(lingua == "javascript") {
-      bot.roles.add('745339437160071208')
+      bot.roles.add('id do cargo de javascript')
     } else if(lingua == "dbd") {
-      bot.roles.add('745344132678942785')
+      bot.roles.add('id do cargo de dbd')
     } else if(lingua == "python") {
-      bot.roles.add('745344217680969956')
+      bot.roles.add('id do cargo de python')
     } else if(lingua == "outra") {
-      bot.roles.add('745361673501540423')
+      bot.roles.add('id do cargo de outra linguagem')
     }
     bot.roles.remove('745756389741428917')
     let d = message.guild.members.cache.get(dono)
@@ -43,7 +45,7 @@ module.exports = {
       verificador: "nao"
     })
     message.channel.send(`O bot \`${bot.user.username}\` foi aprovado com sucesso!`)
-    let bl = client.channels.cache.get('745387874324840539')
+    let bl = client.channels.cache.get('id do canal de logs')
     let n = data.val().nota
     let txt;
     if(n == "nao") n = null
