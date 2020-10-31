@@ -10,7 +10,7 @@ module.exports = {
   category: "dono",
   run: async (client, message, args) => {
 
-  if(message.author.id != "465599065007194113") {
+  if(message.author.id != "Seuid") {
     return;
   }
   
