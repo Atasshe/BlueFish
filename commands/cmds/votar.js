@@ -11,10 +11,10 @@ module.exports = {
     if(!bot.user.bot) {
       return message.reply(`Você não mencionou um bot e sim um usuário!`)
     }
-    if(bot.user.id == "745366652790767647") {
+    if(bot.user.id == cliente.user.id) {
       return message.reply("Não quero seus votos.")
     }
-    var ref = `BlueF/Bots/${bot.user.id}/Infos`
+    var ref = `BotList/Bots/${bot.user.id}/Infos`
     client.db.ref(ref).once("value").then(async function(snap) {
       if(snap.val() != null) {
       
@@ -53,11 +53,11 @@ module.exports = {
         var votos = snap.val().votos
         if(votos == null) votos = 0
         var votosnew = votos + quan
-        client.db.ref(`BlueF/Bots/${bot.user.id}/Infos`).update({
+        client.db.ref(`BotList/Bots/${bot.user.id}/Infos`).update({
           votos: votosnew
         })
         message.reply(`Voto realizado com sucesso, o bot recebeu \`${quan}\` voto(s)`)
-        var canal = "760427520029491200"
+        var canal = "id do canal de logs'"
         var canalm = client.channels.cache.get(canal)
         canalm.send(`<:voto:746416781416988752> | ${message.author} acabou de votar no bot \`${bot.user.username}\` e agora ele tem \`${votos + quan}\` votos!`)
       } else {
