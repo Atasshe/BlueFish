@@ -58,7 +58,7 @@ module.exports = {
                         if(choice == "nao" || choice == "não") {
                           return message.author.send("Operação cancelada!")
                         } else if(choice == "sim") {
-                          let soli = client.channels.cache.get('745390110249582732')
+                          let soli = client.channels.cache.get('id do canal onde irá ir às informações do bot para ser verificado')
                           const embed = new Discord.MessageEmbed()
                           .setAuthor(`Novo bot enviado por ${message.author.username}`)
                           .addField("Nome", nome, false)
@@ -70,10 +70,10 @@ module.exports = {
                          soli.send('<@&745342351953625098>',embed).then(msg => {
                           
                          })
-                         let bl = client.channels.cache.get('745387874324840539')
+                         let bl = client.channels.cache.get('id do canal de logs')
                          bl.send(`<:mns1:746470605653803181> | O membro ${message.author} enviou o bot \`${nome}\` para verificação!`)
                          message.author.send(`✅  | O bot \`${nome}\` foi enviado para verificação, por favor aguarde ele ser analisado, fique de olho no canal ${bl}.`)
-                 db.ref(`BlueF/Bots/${id}/Infos`).set({
+                 db.ref(`BotList/Bots/${id}/Infos`).set({
                    nota: "nao",
                    prefixo: prefixo,
                    nome: nome,
@@ -87,7 +87,7 @@ module.exports = {
                    lingua: lingua
                  })
                         
-                 db.ref(`BlueF/Donos/${message.author.id}/Bot`).set({
+                 db.ref(`BotList/Donos/${message.author.id}/Bot`).set({
                    bot: id
                  })
                         
