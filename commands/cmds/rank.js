@@ -39,12 +39,6 @@ module.exports = {
       realArr.push(`**${em} - ${mes[k].name}** » **${mes[k].amount}** votos`)
     }
     var fim = realArr.join("\n")
-    var cn = message.guild.channels.cache.get("761306675118342165")
-    if(args[0] == "87674783") {
-      cn.bulkDelete(10)
-      message.channel.send(fim)
-    } else {
     message.channel.send(fim)
-    }
   }
 }
