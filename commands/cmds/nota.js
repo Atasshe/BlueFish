@@ -9,7 +9,7 @@ module.exports = {
     if(!bot) {
       return message.reply("Você precisa mencionar um bot!")
     }
-    var refe = `BlueF/Bots/${bot.id}/Infos`
+    var refe = `BotList/Bots/${bot.id}/Infos`
     var db = client.db
     let data = db.ref(refe).once("value").then(async function(snap) {
     if(snap.val() == null) {
