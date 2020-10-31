@@ -4,15 +4,6 @@ const Discord = require("discord.js")
 const Timeout = new Discord.Collection()
 const { dprefix } = require("../../config.json")
 module.exports = async (client, message) => {
-   
-  
-
-  
-    
-   
-    
-
-    
    if(message.author.bot) return
     if(!message.content.toLowerCase().startsWith(dprefix)) return;
     if(!message.guild) return;
