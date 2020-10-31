@@ -9,7 +9,7 @@ module.exports = {
     if(!bot) {
       return message.reply("Você precisa mencionar algum bot!")
     }
-    var refe = `BlueF/Bots/${bot.user.id}/Infos`
+    var refe = `BotList/Bots/${bot.user.id}/Infos`
     var db = client.db
     let data = db.ref(refe).once("value").then(async function(snap) {
     if(snap.val() == null) {
@@ -29,9 +29,9 @@ module.exports = {
     }
     let dono = snap.val().dono
     let nome = snap.val().nome
-    db.ref(`BlueF/Donos/${dono}/Bot`).set(null)
+    db.ref(`BotList/Donos/${dono}/Bot`).set(null)
     db.ref(refe).set(null)
-client.channels.cache.get('745387874324840539')
+client.channels.cache.get('id do canal de logs')
     .send(`<:non:746416709862424687> | O bot \`${bot.user.username}\` de <@${dono}> foi reprovado pelo motivo: \`${mot}\``)
     bot.kick('Bot reprovado')
     message.reply(`O bot \`${bot.user.username}\` foi reprovado com sucesso pelo motivo: \`${mot}\``)
