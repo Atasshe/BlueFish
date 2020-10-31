@@ -1,9 +1,9 @@
 # BlueFish Git
 
-Um simples bot para uma botlist!<br>
-Feito por: Heimsk#1904<br>
-Se você quiser entrar na bot list e adicionar seu bot e também ganhar a ajuda aperte no link abaixo!<br>
-Link da botlist: 
+> Um simples bot para uma botlist!<br>
+> Feito por: Heimsk#1904<br>
+> Se você quiser entrar na bot list e adicionar seu bot e também ganhar a ajuda aperte no link abaixo!<br>
+> Link da botlist: [LINK](https://discord.gg/fK2UD68)
 
 # Descrição
 
